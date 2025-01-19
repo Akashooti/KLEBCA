@@ -77,6 +77,29 @@
 
 
 /*** Navbar ***/
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+/* Apply the animation */
+.shake {
+    display: inline-block;
+    animation: shake 0.5s infinite;
+}
+
+/* Optional styling for the link */
+.nav-link {
+    font-size: 10px;
+    text-decoration: none;
+    color: #28a745; /* Bootstrap's success color */
+}
+
+.nav-link:hover {
+    color: #155724; /* Darker success shade on hover */
+}
 .navbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
